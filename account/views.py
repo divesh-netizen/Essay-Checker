@@ -22,7 +22,7 @@ def service(request):
 def test(request):
     inp = request.POST.get('param')
     inp1 = request.POST.get('mykwrd1') 
-    out = run([sys.executable,'C:\\Users\\DIVESH\\projects\\myproject\\account\\check.py',inp,inp1],shell=False,stdout=PIPE)
+    out = run([sys.executable,'C:\\Users\\DIVESH\\projects\\Essay checker\\account\\check.py',inp,inp1],shell=False,stdout=PIPE)
     print(out.stdout)
 
     return render(request, 'index.html',{'data':out.stdout})
@@ -38,7 +38,7 @@ def test1(request):
     print('file raw url',filename)
     print('file full url',fileurl)
     print('template url is ',templateurl)
-    inp = run([sys.executable,'C:\\Users\\DIVESH\\projects\\myproject\\account\\check1.py',str(fileurl),str(filename),inp1],shell=False,stdout=PIPE)
+    inp = run([sys.executable,'C:\\Users\\DIVESH\\projects\\Essay checker\\account\\check1.py',str(fileurl),str(filename),inp1],shell=False,stdout=PIPE)
     
 
     return render(request, 'index.html',{'raw_url':templateurl,'edit_url':inp.stdout})

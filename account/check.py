@@ -64,7 +64,7 @@ for word in word_tokenize(book):
         wrong = wrong + 1
         
 
-file = open("C:\\Users\\DIVESH\\projects\\myproject\\media\\div1.txt", "w+")
+file = open("C:\\Users\\DIVESH\\projects\\Essay checker\\media\\div1.txt", "w+")
 for f in array:
     file.write(f+' ') 
 
@@ -98,10 +98,10 @@ fm_2 = 50 * match_percent1
 fm = fm_1 + fm_2
 
 
-file = open("C:\\Users\\DIVESH\\projects\\myproject\\media\\div1.txt", "r")
+file = open("C:\\Users\\DIVESH\\projects\\Essay checker\\media\\div1.txt", "r")
 file = file.read()
 print("your given keyword match",match_percent,"%  percent \n\n\n")
-print("The final marks is",fm)
+print("The final marks is",format(fm, ".2f"))
 print(print(file))
 
 

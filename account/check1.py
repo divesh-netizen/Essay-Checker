@@ -47,8 +47,8 @@ def clean_text(text):
 
 book = clean_text(book)
 #TGREEN =  '\033[32m'
-START = '\033[4m'
-END = '\033[0m'
+# START = '\033[4m'
+# END = '\033[0m'
 spell = SpellChecker()
 array = []
 right = 0
@@ -62,7 +62,7 @@ for word in word_tokenize(book):
         wrong = wrong + 1
         
 
-file = open("C:\\Users\\DIVESH\\projects\\myproject\\media\\div.txt", "w+")
+file = open("C:\\Users\\DIVESH\\projects\\Essay checker\\media\\div.txt", "w+")
 for f in array:
     file.write(f+' ') 
 
@@ -96,10 +96,10 @@ fm_2 = 50 * match_percent1
 fm = fm_1 + fm_2
 
 
-file = open("C:\\Users\\DIVESH\\projects\\myproject\\media\\div.txt", "r")
+file = open("C:\\Users\\DIVESH\\projects\\Essay checker\\media\\div.txt", "r")
 file = file.read()
 print("your given keyword match",match_percent,"%  percent \n\n")
-print("The final marks is",fm,"\n\n\n")
+print("The final marks is",format(fm, ".2f"),"\n\n\n")
 print(file)
 
 
